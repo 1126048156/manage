@@ -39,14 +39,14 @@ namespace manage
                     try
                     {
 MailMessage mymail = new MailMessage();
-                    mymail.From = new MailAddress("x1596638165@163.com");
+                    mymail.From = new MailAddress("xxxx@163.com");
                     mymail.To.Add(new MailAddress(TextBox2.Text));
                     mymail.Subject = "重置密码";
-                    mymail.Body = "重置密码请点击此" + "http://localhost:52243//resetpassword.aspx?id=" + TextBox1.Text + "&time=" + DateTimeToStamp(DateTime.Now);
+                    mymail.Body = "重置密码请点击此" + "http://localhost:52243//resetpassword.aspx?id=" + TextBox1.Text + "&time=" + DateTimeToStamp(DateTime.Now);//localhost需要修改
                     SmtpClient myclient = new SmtpClient();
                     myclient.Host = "smtp.163.com";
                     myclient.Port = 25;
-                    myclient.Credentials = new NetworkCredential("x1596638165@163.com","xqqx09487");
+                    myclient.Credentials = new NetworkCredential("xxxx@163.com","xxxx");
                     Response.Write("<script language=javascript>alert('已成功发送至您的邮箱，请注意查收')</script>");
                     myclient.Send(mymail);
                     }
